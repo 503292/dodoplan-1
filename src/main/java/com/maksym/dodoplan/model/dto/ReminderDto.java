@@ -1,4 +1,4 @@
 package com.maksym.dodoplan.model.dto;
 
-public class MessageDto {
+public class ReminderDto {
 }

@@ -1,6 +1,5 @@
 package com.maksym.dodoplan.model;
 
-import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
