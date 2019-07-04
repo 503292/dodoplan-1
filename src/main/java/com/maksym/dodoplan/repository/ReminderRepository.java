@@ -1,10 +1,10 @@
 package com.maksym.dodoplan.repository;
 
-import com.maksym.dodoplan.model.Role;
+import com.maksym.dodoplan.model.Reminder;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RoleRepository extends CrudRepository<Role, Long> {
+public interface ReminderRepository extends CrudRepository<Reminder, Long> {
 
 }

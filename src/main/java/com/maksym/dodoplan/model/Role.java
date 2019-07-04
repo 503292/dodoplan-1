@@ -22,6 +22,7 @@ public class Role {
     @Column
     private String description;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "role")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
     private Set<User> users;
 }

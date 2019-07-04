@@ -18,6 +18,7 @@ public class Chapter {
     @Column(name = "chapterName")
     private String chapterName;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "chapter")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
     private Set<User> users;
 }

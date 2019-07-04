@@ -18,6 +18,7 @@ public class Task {
     @Column(name = "taskBody")
     private String taskBody;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "task")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
     private Set<User> users;
 }
