@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(s)
-                .orElseThrow(() -> new UserNotFoundException("User with login: " + s + " not found"));
+                .orElseThrow(() -> new UserNotFoundException("UserDto with login: " + s + " not found"));
 
         if (Objects.isNull(user)) {
             log.error("Invalid username or password");
@@ -51,6 +51,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     public User findById(Long id) {
         return userRepository.findById(id)
-                .orElseThrow(() -> new UsernameNotFoundException("User with id: " + id + " not found"));
+                .orElseThrow(() -> new UsernameNotFoundException("UserDto with id: " + id + " not found"));
     }
 }

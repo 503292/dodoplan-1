@@ -3,7 +3,7 @@ package com.maksym.dodoplan.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 @Data
 @Entity
@@ -12,13 +12,15 @@ public class Chapter {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
-    @Column(name = "chapterName")
-    private String chapterName;
+    @Column(name = "title")
+    private String title;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private Set<User> users;
+    private User user;
+
+    @OneToMany(mappedBy = "chapter", fetch = FetchType.LAZY)
+    private List<Task> tasks;
 }

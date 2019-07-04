@@ -15,14 +15,10 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @Column
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column
+    @Column(name = "description")
     private String description;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id")
-    private Set<User> users;
 }

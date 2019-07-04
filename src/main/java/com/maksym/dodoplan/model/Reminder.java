@@ -3,8 +3,6 @@ package com.maksym.dodoplan.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import java.util.Set;
 
 @Data
 @Entity
@@ -15,15 +13,13 @@ public class Reminder {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
-        @NotNull
-        @Column(name = "reminderTitle")
-        private String reminderTitle;
+        @Column(name = "title", nullable = false)
+        private String title;
 
-        @NotNull
-        @Column(name = "reminderBody")
-        private String reminderBody;
+        @Column(name = "body", nullable = false)
+        private String body;
 
-        @ManyToOne(fetch = FetchType.EAGER)
+        @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(name = "user_id")
-        private Set<User> users;
+        private User user;
 }
