@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Set;
 
 @Data
 @Entity
@@ -20,4 +21,7 @@ public class Role {
 
     @Column
     private String description;
+
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "role")
+    private Set<User> users;
 }

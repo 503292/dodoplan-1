@@ -3,6 +3,7 @@ package com.maksym.dodoplan.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Data
 @Entity
@@ -16,4 +17,7 @@ public class Chapter {
 
     @Column(name = "chapterName")
     private String chapterName;
+
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "chapter")
+    private Set<User> users;
 }
