@@ -28,7 +28,6 @@ public class Task {
     @JoinColumn(name = "chapter_id")
     private Chapter chapter;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "task_id")
-    private Reminder reminder;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "task")
+    private List<Reminder> reminders;
 }

@@ -8,11 +8,9 @@ public interface RoleService {
 
     RoleDto save(RoleDto roleDto);
 
-    RoleDto update(RoleDto roleDto);
-
-    RoleDto delete(RoleDto roleDto);
+    void delete(RoleDto roleDto);
 
     RoleDto findById(Long id);
 
-    List<RoleDto> findAllRole();
+    List<RoleDto> findAll();
 }

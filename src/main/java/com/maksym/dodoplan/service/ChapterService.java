@@ -8,11 +8,10 @@ public interface ChapterService {
 
     ChapterDto save(ChapterDto chapterDto);
 
-    ChapterDto update(ChapterDto chapterDto);
-
-    ChapterDto delete(ChapterDto chapterDto);
+    void delete(ChapterDto chapterDto);
 
     ChapterDto findById(Long id);
 
-    List<ChapterDto> findAllChapter();
+    List<ChapterDto> findAll();
+
 }

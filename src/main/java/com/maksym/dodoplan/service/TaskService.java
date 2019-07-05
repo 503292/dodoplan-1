@@ -6,11 +6,13 @@ import java.util.List;
 
 public interface TaskService {
 
-    TaskDto getById(Long id);
+    TaskDto findById(Long id);
 
-    List<TaskDto> getAllTasks();
+    List<TaskDto> findAllTasks();
 
-    List<TaskDto> getAllTasksByChapter(Long chapterId);
+    List<TaskDto> findAllTasksByChapter(Long chapterId);
+
+    TaskDto findTaskByRemainder(Long remainderId);
 
     TaskDto save (TaskDto taskDto);
 

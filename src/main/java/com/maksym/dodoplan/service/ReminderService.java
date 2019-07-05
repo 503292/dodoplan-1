@@ -8,11 +8,10 @@ public interface ReminderService {
 
     ReminderDto save(ReminderDto reminderDto);
 
-    ReminderDto update(ReminderDto reminderDto);
-
-    ReminderDto delete(ReminderDto reminderDto);
+    void delete(ReminderDto reminderDto);
 
     ReminderDto findById(Long id);
 
-    List<ReminderDto> findAllReminder();
+    List<ReminderDto> findAll();
+
 }

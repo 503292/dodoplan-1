@@ -6,24 +6,23 @@ spring:
     database: mysql
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
 
   # Database
-
   datasource:
     url: jdbc:mysql://localhost:3306/dodoplan?serverTimezone=UTC
     username: root
-    password: toor
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+
 #  datasource:
 #    driver-class-name: org.postgresql.Driver
 #    url: jdbc:postgresql://localhost:5432/dodoplan?createDatabaseIfNotExist=true
 #    username: postgres
 #    password: toor
 
-
 #  liquibase:
-#    change-log: classpath:/changelog/db.changelog-master.yaml
+#    change-log: classpath:/changelog/db.changelog-master.ya ml
 
 # Security configuration
 security:
