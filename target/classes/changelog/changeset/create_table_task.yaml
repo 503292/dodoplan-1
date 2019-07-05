@@ -1,20 +1,21 @@
 databaseChangeLog:
   - changeSet:
-      id: 4
+      id: 5
       author: KalyshMaksym
       changes:
         - createTable:
-            tableName: user_roles
+            tableName: task
             columns:
               - column:
-                  name: user_id
+                  name: id
                   type: bigint
+                  autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: role_id
-                  type: bigint
-                  constraints:
-                    primaryKey: true
-                    nullable: false
+                  name: title
+                  type: varchar(128)
+              - column:
+                  name: body
+                  type: varchar(128)

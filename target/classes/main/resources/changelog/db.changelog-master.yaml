@@ -1,7 +1,0 @@
-databaseChangeLog:
-  - include:
-      file: changelog/changeset/create_table_roles.yaml
-  - include:
-      file: changelog/changeset/create_table_user.yaml
-  - include:
-      file: changelog/changeset/create_table_user_roles.yaml
