@@ -14,7 +14,7 @@ spring:
     username: root
     password: toor
     driver-class-name: com.mysql.cj.jdbc.Driver
-    
+
 #  datasource:
 #    driver-class-name: org.postgresql.Driver
 #    url: jdbc:postgresql://localhost:5432/dodoplan?createDatabaseIfNotExist=true
