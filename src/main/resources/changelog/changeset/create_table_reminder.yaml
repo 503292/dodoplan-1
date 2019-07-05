@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 7
+      author: KalyshMaksym
+      changes:
+        - createTable:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(128)
+              - column:
+                  name: body
+                  type: varchar(128)
