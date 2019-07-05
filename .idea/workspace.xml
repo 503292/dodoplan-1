@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ceb850f-d099-46ff-bbf6-f02238e32abb" name="Default Changelist" comment="">
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/maksym/dodoplan/model/Chapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maksym/dodoplan/model/Chapter.java" afterDir="false" />
@@ -27,6 +28,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/main/resources/changelog/changeset/create_table_user.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main/resources/changelog/changeset/create_table_user_roles.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main/resources/changelog/db.changelog-master.yaml" beforeDir="false" />
+
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,16 +57,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+
         <entry file="file://$PROJECT_DIR$/src/main/java/com/maksym/dodoplan/model/Chapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
@@ -72,20 +77,24 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.6.RELEASE/spring-boot-2.1.6.RELEASE.jar!/org/springframework/boot/web/embedded/tomcat/TomcatServletWebServerFactory.class">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret line="120" selection-start-line="120" selection-end-line="120" />
+
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+
         <entry file="file://$PROJECT_DIR$/src/main/java/com/maksym/dodoplan/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="37">
@@ -93,24 +102,29 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+
         <entry file="file://$PROJECT_DIR$/src/main/resources/changelog/changeset/create_table_task.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+
         <entry file="file://$PROJECT_DIR$/src/main/resources/changelog/changeset/create_table_user.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+
             </state>
           </provider>
         </entry>
@@ -118,8 +132,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="226">
               <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+
             </state>
           </provider>
         </entry>
@@ -260,6 +276,7 @@
             <path>
               <item name="dodoplan-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="dodoplan-1" type="462c0819:PsiDirectoryNode" />
+
             </path>
             <path>
               <item name="dodoplan-1" type="b2602c69:ProjectViewProjectNode" />
@@ -338,6 +355,7 @@
               <item name="maksym" type="462c0819:PsiDirectoryNode" />
               <item name="dodoplan" type="462c0819:PsiDirectoryNode" />
               <item name="exception" type="462c0819:PsiDirectoryNode" />
+
             </path>
             <path>
               <item name="dodoplan-1" type="b2602c69:ProjectViewProjectNode" />
@@ -349,10 +367,12 @@
               <item name="maksym" type="462c0819:PsiDirectoryNode" />
               <item name="dodoplan" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+
             </path>
             <path>
               <item name="dodoplan-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="dodoplan-1" type="462c0819:PsiDirectoryNode" />
+
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
