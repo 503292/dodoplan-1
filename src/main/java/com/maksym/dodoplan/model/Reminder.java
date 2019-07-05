@@ -1,10 +1,15 @@
 package com.maksym.dodoplan.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
-@Data
+@Setter
+@Getter
+@NoArgsConstructor
 @Entity
 @Table(name = "reminder")
 public class Reminder {
@@ -20,6 +25,6 @@ public class Reminder {
         private String body;
 
         @ManyToOne(fetch = FetchType.LAZY)
-        @JoinColumn(name = "user_id")
-        private User user;
+        @JoinColumn(name = "task_id")
+        private Task task;
 }
