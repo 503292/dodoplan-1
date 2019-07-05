@@ -40,7 +40,7 @@ public class AuthServiceImpl implements AuthService {
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
         User user = userRepository.findByEmail(login)
-                .orElseThrow(() -> new UserNotFoundException("User with login: " + login + " not found"));
+                .orElseThrow(() -> new UserNotFoundException("UserDto with login: " + login + " not found"));
 
         return tokenService.createToken(user.getId());
     }

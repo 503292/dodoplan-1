@@ -44,7 +44,7 @@ databaseChangeLog:
                   value: "USER"
               - column:
                   name: description
-                  value: "User role"
+                  value: "UserDto role"
         - insert:
             tableName: roles
             columns:
