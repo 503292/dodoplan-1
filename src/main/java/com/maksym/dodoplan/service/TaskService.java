@@ -12,8 +12,6 @@ public interface TaskService {
 
     List<TaskDto> getAllTasksByChapter(Long chapterId);
 
-    List<TaskDto> getAllTasksByRemainder(Long remainderId);
-
     TaskDto save (TaskDto taskDto);
 
     TaskDto update (TaskDto taskDto);

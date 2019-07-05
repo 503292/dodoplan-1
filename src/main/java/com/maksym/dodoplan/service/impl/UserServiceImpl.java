@@ -50,24 +50,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         return authorities;
     }
 
-    public User findById(Long id) {
-        return userRepository.findById(id)
-                .orElseThrow(() -> new UsernameNotFoundException("UserDto with id: " + id + " not found"));
-    }
-
-
-
-
-    @Override
-    public UserDto getById(Long id) {
-        return null;
-    }
-
-    @Override
-    public List<UserDto> getAllUsers() {
-        return null;
-    }
-
     @Override
     public UserDto save(UserDto userDto) {
         return null;
@@ -82,4 +64,16 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public UserDto delete(UserDto userDto) {
         return null;
     }
+
+    @Override
+    public User findById(Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new UsernameNotFoundException("UserDto with id: " + id + " not found"));
+    }
+
+    @Override
+    public List<UserDto> findAllUser() {
+        return null;
+    }
 }
+

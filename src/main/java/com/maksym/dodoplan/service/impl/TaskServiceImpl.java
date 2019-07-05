@@ -23,11 +23,6 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public List<TaskDto> getAllTasksByRemainder(Long remainderId) {
-        return null;
-    }
-
-    @Override
     public TaskDto save(TaskDto taskDto) {
         return null;
     }
