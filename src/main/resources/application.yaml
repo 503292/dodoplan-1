@@ -6,13 +6,13 @@ spring:
     database: mysql
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
 
   # Database
   datasource:
     url: jdbc:mysql://localhost:3306/dodoplan?serverTimezone=UTC
     username: root
-    password: root
+    password: toor
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 #  datasource:
