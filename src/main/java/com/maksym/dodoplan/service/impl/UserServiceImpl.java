@@ -60,6 +60,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("UserDto with id: " + id + " not found"));
     }
 
+
+
     @Override
     public UserDto getById(Long id) {
          return userRepository.findById(id)
@@ -68,7 +70,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public List<UserDto> getAll() {
+    public List<UserDto> findAll() {
         return userRepository.findAll().stream()
                 .filter(Objects::nonNull)
                 .map(e -> modelMapper.map(e, UserDto.class))

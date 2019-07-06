@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class RegisterController {
 
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @PostMapping(value = "/register")
     public String register(){
