@@ -68,7 +68,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public List<UserDto> getAll() {
+    public List<UserDto> findAll() {
         return userRepository.findAll().stream()
                 .filter(Objects::nonNull)
                 .map(e -> modelMapper.map(e, UserDto.class))

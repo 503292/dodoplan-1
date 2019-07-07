@@ -1,11 +1,10 @@
 package com.maksym.dodoplan.service.impl;
 
 import com.maksym.dodoplan.exception.ReminderNotFoundException;
-import com.maksym.dodoplan.exception.UserNotFoundException;
 import com.maksym.dodoplan.model.Reminder;
 import com.maksym.dodoplan.model.dto.ReminderDto;
 import com.maksym.dodoplan.repository.ReminderRepository;
-import com.maksym.dodoplan.service.ChapterService;
+import com.maksym.dodoplan.exception.UserNotFoundException;
 import com.maksym.dodoplan.service.ReminderService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

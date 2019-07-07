@@ -1,25 +1,17 @@
 package com.maksym.dodoplan.controller;
 
-import com.maksym.dodoplan.service.UserService;
+import com.maksym.dodoplan.service.ReminderService;
+import com.maksym.dodoplan.service.impl.ReminderServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/api")
-public class RegisterController {
+public class ReminderController extends ReminderServiceImpl {
 
     @Autowired
-    private UserService userService;
+    private ReminderService reminderService;
 
-    @PostMapping(value = "/register")
-    public String register(){
-        return null;
-
-//        TODO
-
-    }
-
-
+    
 }
