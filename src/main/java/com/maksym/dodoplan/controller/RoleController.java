@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/api")
-public class RoleController extends RoleServiceImpl {
-
+public class RoleController {
+  
     @Autowired
     private RoleService roleService;
-
 }

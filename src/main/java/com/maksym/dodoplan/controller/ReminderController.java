@@ -8,10 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/api")
-public class ReminderController extends ReminderServiceImpl {
-
+public class ReminderController {
     @Autowired
     private ReminderService reminderService;
-
     
 }

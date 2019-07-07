@@ -1,11 +1,8 @@
 package com.maksym.dodoplan.service;
 
 import com.maksym.dodoplan.model.dto.TaskDto;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 
-@Service
 public interface TaskService {
 
     TaskDto findById(Long id);

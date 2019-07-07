@@ -60,8 +60,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("UserDto with id: " + id + " not found"));
     }
 
-
-
     @Override
     public UserDto getById(Long id) {
          return userRepository.findById(id)

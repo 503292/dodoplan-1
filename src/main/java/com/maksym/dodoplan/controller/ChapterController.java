@@ -8,10 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/api")
-public class ChapterController extends ChapterServiceImpl {
+public class ChapterController {
 
     @Autowired
     private ChapterService chapterService;
-
-
 }
