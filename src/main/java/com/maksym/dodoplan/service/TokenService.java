@@ -2,7 +2,7 @@ package com.maksym.dodoplan.service;
 
 import org.springframework.stereotype.Service;
 
-@Service
+
 public interface TokenService {
 
     Long parseToken(String token);

@@ -14,7 +14,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 @Slf4j
-@Service
+@Service(value = "authService")
 public class AuthServiceImpl implements AuthService {
 
     @Autowired
