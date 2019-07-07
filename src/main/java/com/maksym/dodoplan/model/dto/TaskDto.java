@@ -11,7 +11,7 @@ public class TaskDto {
 
     private String body;
 
-    private UserDto user;
+    private Long userId;
 
-    private ChapterDto chapter;
+    private Long chapterId;
 }

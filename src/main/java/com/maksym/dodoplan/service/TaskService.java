@@ -1,18 +1,20 @@
 package com.maksym.dodoplan.service;
 
 import com.maksym.dodoplan.model.dto.TaskDto;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public interface TaskService {
 
-    TaskDto getById(Long id);
+    TaskDto findById(Long id);
 
-    List<TaskDto> getAllTasks();
+    List<TaskDto> findAllTasks();
 
-    List<TaskDto> getAllTasksByChapter(Long chapterId);
+    List<TaskDto> findAllTasksByChapter(Long chapterId);
 
-    List<TaskDto> getAllTasksByRemainder(Long remainderId);
+    TaskDto findTaskByRemainder(Long remainderId);
 
     TaskDto save (TaskDto taskDto);
 

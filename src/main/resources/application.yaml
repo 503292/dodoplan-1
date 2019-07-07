@@ -22,7 +22,7 @@ spring:
 #    password: toor
 
 #  liquibase:
-#    change-log: classpath:/changelog/db.changelog-master.yaml
+#    change-log: classpath:/changelog/db.changelog-master.ya ml
 
 # Security configuration
 security:
