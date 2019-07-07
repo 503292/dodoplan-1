@@ -3,16 +3,16 @@ spring:
 
   # JPA properties
   jpa:
-    database: postgresql
+    database: mysql
     show-sql: true
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
 
   # Database
   datasource:
     url: jdbc:mysql://localhost:3306/dodoplan?serverTimezone=UTC
     username: root
-    password: toor
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 #  datasource:
