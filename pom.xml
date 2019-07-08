@@ -68,11 +68,11 @@
             <version>2.1.0</version>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>org.liquibase</groupId>-->
-            <!--<artifactId>liquibase-core</artifactId>-->
-        <!--</dependency>-->
-        <!--Database driver and utilities-->
+        <dependency>
+            <groupId>org.liquibase</groupId>
+        <artifactId>liquibase-core</artifactId>
+    </dependency>
+    <!--Database driver and utilities-->
 
         <!--Security-->
         <dependency>

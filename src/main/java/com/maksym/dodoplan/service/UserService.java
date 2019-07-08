@@ -5,7 +5,7 @@ import java.util.List;
 
 
 public interface UserService {
-
+    //TODO FIX rechange to get to find
     UserDto getById(Long id);
 
     List<UserDto> findAll();

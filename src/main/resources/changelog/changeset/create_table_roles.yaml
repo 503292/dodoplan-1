@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: 2
-      author: KalyshMaksym
+      id: 3
+      author: Ilnytskyi
       changes:
         - createTable:
             tableName: roles
@@ -23,34 +23,11 @@ databaseChangeLog:
                   type: varchar(128)
                   constraints:
                     nullable: false
-  - changeSet:
-      id: 3
-      author: KalyshMaksym
-      changes:
-        - insert:
-            tableName: roles
-            columns:
               - column:
-                  name: name
-                  value: "ADMIN"
-              - column:
-                  name: description
-                  value: "Admin role"
-        - insert:
-            tableName: roles
-            columns:
-              - column:
-                  name: name
-                  value: "USER"
-              - column:
-                  name: description
-                  value: "UserDto role"
-        - insert:
-            tableName: roles
-            columns:
-              - column:
-                  name: name
-                  value: "MANAGER"
-              - column:
-                  name: description
-                  value: "Manager role"
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKey:
+                      referencedColumnNames: user_id
+                      referencedTableName: user_roles
