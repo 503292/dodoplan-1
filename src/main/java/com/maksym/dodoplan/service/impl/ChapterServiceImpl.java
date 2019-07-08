@@ -59,4 +59,13 @@ public class ChapterServiceImpl implements ChapterService {
                 .map(e -> modelMapper.map(e, ChapterDto.class))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<ChapterDto> findAllByUserId(Long id) {
+
+        return chapterRepository.findAllByUserId(id).stream()
+                .filter(Objects::nonNull)
+                .map(e -> modelMapper.map(e, ChapterDto.class))
+                .collect(Collectors.toList());
+    }
 }

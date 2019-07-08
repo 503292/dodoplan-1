@@ -1,9 +1,15 @@
 package com.maksym.dodoplan;
 
+import com.maksym.dodoplan.model.Chapter;
 import com.maksym.dodoplan.model.Role;
+import com.maksym.dodoplan.model.Task;
 import com.maksym.dodoplan.model.User;
+import com.maksym.dodoplan.model.dto.TaskDto;
+import com.maksym.dodoplan.repository.ChapterRepository;
 import com.maksym.dodoplan.repository.RoleRepository;
+import com.maksym.dodoplan.repository.TaskRepository;
 import com.maksym.dodoplan.repository.UserRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -27,6 +33,17 @@ public class Application implements ApplicationRunner {
 	@Autowired
 	RoleRepository roleRepository;
 
+	@Autowired
+	ModelMapper modelMapper;
+
+//	@Autowired
+//	TaskRepository taskRepository;
+//
+//	@Autowired
+//	ChapterRepository chapterRepository;
+
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
@@ -49,6 +66,25 @@ public class Application implements ApplicationRunner {
 
 //		roleRepository.save(role);
 //		userRepository.save(user);
+
+
+		Task task = new Task();
+		Chapter chapter = new Chapter();
+
+		task.setTitle("taskTitle");
+		task.setBody("TaskBody");
+
+		chapter.setTitle("ChapterTitle");
+		task.setChapter(chapter);
+
+		System.out.println(task);
+		TaskDto taskDto = modelMapper.map(task, TaskDto.class);
+		System.out.println(taskDto);
+		task = modelMapper.map(taskDto, Task.class);
+		System.out.println(task);
+
+
+
 
 	}
 }

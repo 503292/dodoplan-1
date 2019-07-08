@@ -1,7 +1,6 @@
 package com.maksym.dodoplan.service.impl;
 
 import com.maksym.dodoplan.service.TokenService;
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
 import io.jsonwebtoken.*;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;

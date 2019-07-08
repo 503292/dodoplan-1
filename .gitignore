@@ -29,3 +29,6 @@ HELP.md
 .vscode/
 
 application.properties
+application.yaml
+
+*.log
