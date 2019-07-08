@@ -13,12 +13,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.security.Principal;
 import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/api/chapters")
+
 public class ChapterController {
 
     @Autowired
@@ -35,5 +35,4 @@ public class ChapterController {
 
         return new ResponseEntity<>(SecurityContextHolder.getContext().getAuthentication().getName(), HttpStatus.OK);
     }
-
 }

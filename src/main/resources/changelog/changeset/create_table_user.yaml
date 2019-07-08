@@ -13,6 +13,9 @@ databaseChangeLog:
                 constraints:
                   primaryKey: true
                   nullable: false
+                  foreignKey:
+                    referencedColumnNames: id_user
+                    referencedTableName: chapter
             - column:
                 name: email
                 type: varchar(128)
@@ -23,4 +26,12 @@ databaseChangeLog:
                 name: password
                 type: varchar(128)
                 constraints:
+                  nullable: false
+            - column:
+                name: role_id
+                type: bigint
+                constraints:
+                  foreignKey:
+                    referencedColumnNames: roles_id
+                    referencedTableName: user_roles
                   nullable: false
