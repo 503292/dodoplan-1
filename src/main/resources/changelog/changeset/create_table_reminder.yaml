@@ -4,7 +4,7 @@ databaseChangeLog:
       author: KalyshMaksym
       changes:
         - createTable:
-            tableName: riminder
+            tableName: reminder
             columns:
               - column:
                   name: id
@@ -19,3 +19,11 @@ databaseChangeLog:
               - column:
                   name: body
                   type: varchar(128)
+              - column:
+                  name: task_id
+                  type: bigint
+                  constraints:
+                    foreignKey:
+                      referencedColumnNames: id
+                      referencedTableName: task
+                    nullable: false

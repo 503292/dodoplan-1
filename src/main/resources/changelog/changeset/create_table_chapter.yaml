@@ -12,6 +12,15 @@ databaseChangeLog:
                   autoIncrement: true
                   constraints:
                     primaryKey: true
+                    nullable: false
               - column:
                   name: title
                   type: varchar(128)
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    foreignKey:
+                      referencedColumnNames: id
+                      referencedTableName: user
+                    nullable: false

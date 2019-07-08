@@ -7,12 +7,18 @@ import com.maksym.dodoplan.repository.ChapterRepository;
 import com.maksym.dodoplan.service.ChapterService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service(value = "chapterService")
 public class ChapterServiceImpl implements ChapterService {
 
     @Autowired

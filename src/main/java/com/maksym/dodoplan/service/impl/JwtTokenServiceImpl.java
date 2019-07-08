@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import java.nio.charset.StandardCharsets;
 
 @Slf4j
-@Service
+@Service(value = "tokenService")
 public class JwtTokenServiceImpl implements TokenService {
 
     private Logger logger = LoggerFactory.getLogger(getClass());

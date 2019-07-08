@@ -11,3 +11,5 @@ databaseChangeLog:
       file: changelog/changeset/create_table_task.yaml
   - include:
       file: changelog/changeset/create_table_reminder.yaml
+  - include:
+      file: changelog/changeset/create_table_user_roles.yaml

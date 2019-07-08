@@ -9,20 +9,20 @@ spring:
       ddl-auto: create
 
   # Database
-  datasource:
-    url: jdbc:mysql://localhost:3306/dodoplan?serverTimezone=UTC
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
 #  datasource:
 #    driver-class-name: org.postgresql.Driver
 #    url: jdbc:postgresql://localhost:5432/dodoplan?createDatabaseIfNotExist=true
 #    username: postgres
 #    password: toor
 
-#  liquibase:
-#    change-log: classpath:/changelog/db.changelog-master.ya ml
+  datasource:
+    url: jdbc:mysql://localhost:3306/dodoplan?serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  liquibase:
+    change-log: classpath:/changelog/db.changelog-master.yaml
 
 # Security configuration
 security:

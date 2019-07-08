@@ -8,12 +8,14 @@ import com.maksym.dodoplan.exception.UserNotFoundException;
 import com.maksym.dodoplan.service.ReminderService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service(value = "reminderService")
 public class ReminderServiceImpl implements ReminderService {
 
     @Autowired
