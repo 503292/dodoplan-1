@@ -13,4 +13,5 @@ public interface ChapterService {
 
     List<ChapterDto> findAll();
 
+    List<ChapterDto> findAllByUserId(Long id);
 }

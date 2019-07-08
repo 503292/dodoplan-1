@@ -1,5 +1,6 @@
 package com.maksym.dodoplan.model.dto;
 
+import com.maksym.dodoplan.model.Chapter;
 import lombok.Data;
 
 @Data
@@ -13,5 +14,5 @@ public class TaskDto {
 
     private Long userId;
 
-    private Long chapterId;
+    private ChapterDto chapter;
 }

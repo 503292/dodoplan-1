@@ -30,4 +30,6 @@ HELP.md
 
 application.properties
 
-.log
+application.yaml
+
+*.log

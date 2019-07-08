@@ -3,7 +3,6 @@ package com.maksym.dodoplan.service;
 import com.maksym.dodoplan.model.dto.TaskDto;
 import java.util.List;
 
-@Service
 public interface TaskService {
 
     TaskDto findById(Long id);

@@ -8,10 +8,6 @@ import com.maksym.dodoplan.service.ChapterService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 import java.util.List;
 import java.util.Objects;
@@ -59,6 +55,15 @@ public class ChapterServiceImpl implements ChapterService {
     public List<ChapterDto> findAll() {
 
         return chapterRepository.findAll().stream()
+                .filter(Objects::nonNull)
+                .map(e -> modelMapper.map(e, ChapterDto.class))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ChapterDto> findAllByUserId(Long id) {
+
+        return chapterRepository.findAllByUserId(id).stream()
                 .filter(Objects::nonNull)
                 .map(e -> modelMapper.map(e, ChapterDto.class))
                 .collect(Collectors.toList());
