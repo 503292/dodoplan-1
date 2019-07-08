@@ -1,5 +1,6 @@
 package com.maksym.dodoplan.model.dto;
 
+import com.maksym.dodoplan.model.Chapter;
 import lombok.Data;
 
 @Data

@@ -1,7 +1,6 @@
 package com.maksym.dodoplan.service;
 
 import com.maksym.dodoplan.model.dto.ChapterDto;
-
 import java.util.List;
 
 public interface ChapterService {
@@ -14,4 +13,5 @@ public interface ChapterService {
 
     List<ChapterDto> findAll();
 
+    List<ChapterDto> findAllByUserId(Long id);
 }

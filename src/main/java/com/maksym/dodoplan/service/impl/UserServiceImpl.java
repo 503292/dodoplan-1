@@ -11,11 +11,13 @@ import com.maksym.dodoplan.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -30,7 +32,11 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     private UserRepository userRepository;
 
     @Autowired
+    @Qualifier(value = "modelMapper")
     private ModelMapper modelMapper;
+
+    @Autowired
+    PasswordEncoder passwordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
@@ -80,6 +86,36 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         User user = Optional.of(userDto)
                 .map(e -> modelMapper.map(e, User.class))
                 .orElseThrow(() -> new UserNotFoundException("UserDto is null Object. Nothing to save"));
+
+        user.setPassword(passwordEncoder.encode(userDto.getPassword()));
+
+        return modelMapper.map(userRepository.save(user), UserDto.class);
+    }
+
+    @Override
+    public UserDto update(Long id, UserDto userDto) {
+        User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(""));
+
+        user.setChapters(
+                userDto.getChapters().stream()
+                .map(e -> modelMapper.map(e, Chapter.class))
+                .collect(Collectors.toList())
+        );
+
+        user.setTasks(
+                userDto.getTasks().stream()
+                        .map(e -> modelMapper.map(e, Task.class))
+                        .collect(Collectors.toList())
+        );
+
+        user.setRoles(
+                userDto.getRoles().stream()
+                        .map(e -> modelMapper.map(e, Role.class))
+                        .collect(Collectors.toSet())
+        );
+
+        user.setPassword(passwordEncoder.encode(userDto.getPassword()));
+
         return modelMapper.map(userRepository.save(user), UserDto.class);
     }
 
