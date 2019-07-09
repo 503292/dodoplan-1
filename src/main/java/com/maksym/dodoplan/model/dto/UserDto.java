@@ -29,10 +29,10 @@ public class UserDto {
     private String secondname;
 
     private Set<RoleDto> roles;
-
-    private List<ReminderDto> reminders;
-
-    private List<ChapterDto> chapters;
-
-    private List<TaskDto> tasks;
+//
+//    private List<ReminderDto> reminders;
+//
+//    private List<ChapterDto> chapters;
+//
+//    private List<TaskDto> tasks;
 }
