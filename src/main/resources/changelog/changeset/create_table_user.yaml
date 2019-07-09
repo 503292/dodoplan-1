@@ -24,7 +24,7 @@ databaseChangeLog:
                   unique: true
             - column:
                 name: password
-                type: varchar(20)
+                type: varchar(256)
                 constraints:
                   nullable: false
             - column:
@@ -36,22 +36,4 @@ databaseChangeLog:
                 name: secondname
                 type: varchar(20)
                 constraints:
-                  nullable: false
-            - column:
-                name: firstname
-                type: varchar(32)
-                constraints:
-                  nullable: false
-            - column:
-                name: secondname
-                type: varchar(32)
-                constraints:
-                   nullable: false
-            - column:
-                name: role_id
-                type: bigint
-                constraints:
-                  foreignKey:
-                    referencedColumnNames: roles_id
-                    referencedTableName: user_roles
                   nullable: false
