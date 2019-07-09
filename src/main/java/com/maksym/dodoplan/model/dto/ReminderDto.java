@@ -12,6 +12,6 @@ public class ReminderDto {
 
     private String body;
 
-    private User user;
+//    private User user;
 
 }
