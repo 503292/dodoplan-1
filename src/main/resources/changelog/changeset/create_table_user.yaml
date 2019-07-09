@@ -24,7 +24,17 @@ databaseChangeLog:
                   unique: true
             - column:
                 name: password
-                type: varchar(128)
+                type: varchar(20)
+                constraints:
+                  nullable: false
+            - column:
+                name: firstname
+                type: varchar(20)
+                constraints:
+                  nullable: false
+            - column:
+                name: secondname
+                type: varchar(20)
                 constraints:
                   nullable: false
             - column:

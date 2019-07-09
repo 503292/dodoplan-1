@@ -12,5 +12,5 @@ public class ChapterDto {
 
     private UserDto user;
 
-    private List<TaskDto> tasks;
+//    private List<TaskDto> tasks;
 }

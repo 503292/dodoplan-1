@@ -96,17 +96,17 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public UserDto update(Long id, UserDto userDto) {
         User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(""));
 
-        user.setChapters(
-                userDto.getChapters().stream()
-                .map(e -> modelMapper.map(e, Chapter.class))
-                .collect(Collectors.toList())
-        );
-
-        user.setTasks(
-                userDto.getTasks().stream()
-                        .map(e -> modelMapper.map(e, Task.class))
-                        .collect(Collectors.toList())
-        );
+//        user.setChapters(
+//                userDto.getChapters().stream()
+//                .map(e -> modelMapper.map(e, Chapter.class))
+//                .collect(Collectors.toList())
+//        );
+//
+//        user.setTasks(
+//                userDto.getTasks().stream()
+//                        .map(e -> modelMapper.map(e, Task.class))
+//                        .collect(Collectors.toList())
+//        );
 
         user.setRoles(
                 userDto.getRoles().stream()

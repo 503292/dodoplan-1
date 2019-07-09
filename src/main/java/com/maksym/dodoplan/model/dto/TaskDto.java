@@ -14,5 +14,5 @@ public class TaskDto {
 
     private Long userId;
 
-    private ChapterDto chapter;
+    private Long chapterId;
 }
