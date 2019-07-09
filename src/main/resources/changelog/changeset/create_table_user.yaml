@@ -28,6 +28,16 @@ databaseChangeLog:
                 constraints:
                   nullable: false
             - column:
+                name: firstname
+                type: varchar(32)
+                constraints:
+                  nullable: false
+            - column:
+                name: secondname
+                type: varchar(32)
+                constraints:
+                   nullable: false
+            - column:
                 name: role_id
                 type: bigint
                 constraints:
