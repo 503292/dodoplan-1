@@ -36,8 +36,8 @@ public class Application implements ApplicationRunner {
 	@Autowired
 	ModelMapper modelMapper;
 
-//	@Autowired
-//	TaskRepository taskRepository;
+	@Autowired
+	TaskRepository taskRepository;
 //
 //	@Autowired
 //	ChapterRepository chapterRepository;
@@ -50,19 +50,21 @@ public class Application implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		String email = "admin@admin.admin";
-		String password = passwordEncoder.encode("admin");
-
-		Role role = new Role();
-		role.setName("ADMIN");
-		role.setDescription("Some admin role");
-
-		User user = new User();
-		user.setEmail(email);
-		user.setPassword(password);
-		user.setRoles(new HashSet<Role>(){{
-			add(role);
-		}});
+//		String email = "admin@admin.admin";
+//		String password = passwordEncoder.encode("maxymKa-");
+//
+//		Role role = new Role();
+//		role.setName("ADMIN");
+//		role.setDescription("Some admin role");
+//
+//		User user = new User();
+//		user.setEmail(email);
+//		user.setPassword(password);
+//		user.setFirstname("firstname");
+//		user.setSecondname("secondname");
+//		user.setRoles(new HashSet<Role>(){{
+//			add(role);
+//		}});
 
 //		roleRepository.save(role);
 //		userRepository.save(user);
@@ -82,9 +84,6 @@ public class Application implements ApplicationRunner {
 		System.out.println(taskDto);
 		task = modelMapper.map(taskDto, Task.class);
 		System.out.println(task);
-
-
-
 
 	}
 }

@@ -88,7 +88,7 @@ public class SwaggerConfig {
 
     List<SecurityReference> defaultAuth() {
         AuthorizationScope authorizationScope
-                = new AuthorizationScope("global", "accessEverything");
+                = new AuthorizationScope("9DKxk4ZuRV7SoyIR4s5Szh79a1zwIm8q", "accessEverything");
         AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
         authorizationScopes[0] = authorizationScope;
         return Lists.newArrayList(
